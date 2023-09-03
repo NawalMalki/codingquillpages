@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>JavaScript fundamentals</title>
+</head>
+<body>
+    <div class="container">
+
+    
+    <h1><b><i><span style="color: #ff4930">JavaScript Fundamentals</span></i></b></h1>
+<p>I have recently completed a course that extensively covered the foundational principles of JavaScript, and I'm here to provide you with a concise overview. This post will enable you to grasp the fundamental concepts without the need to enroll in the course.</p>
+<h2 class="heading"><b><i><span class="npf_color_ross">Prerequisites: Fundamental HTML Comprehension</span></i></b></h2>
+<p>Before delving into JavaScript, it is imperative to possess a basic understanding of HTML. Knowledge of CSS, while beneficial, is not mandatory, as it primarily pertains to the visual aspects of web pages.</p>
+<h2 class="heading"><b><i><span class="npf_color_ross">Manipulating HTML Text with JavaScript</span></i></b></h2>
+<p>When it comes to modifying text using JavaScript, the <b><i><span class="npf_color_monica">innerHTML</span></i></b> function is the go-to tool. Let's break down the process step by step:</p>
+<ol><li>Initiate the process by selecting the HTML element whose text you intend to modify. This selection can be accomplished by employing various DOM (Document Object Model) element selection methods offered by JavaScript ( I'll talk about them in a second )</li>
+<li>Optionally, you can store the selected element in a variable (we'll get into variables shortly).</li>
+<li>Employ the <b>innerHTML</b> function to substitute the existing text with your desired content.</li>
+</ol>
+<h2 class="heading"><b><i><span class="npf_color_ross">Element Selection: IDs or Classes</span></i></b></h2>
+<p>You have the opportunity to enhance your element selection by assigning either an ID or a class:</p>
+<ul><li><b><i><span class="npf_color_rachel">Assigning an ID:</span></i></b></li>
+</ul>
+<p>To uniquely identify an element, the <b><i><span class="npf_color_monica">.getElementById()</span></i></b> function is your go-to choice. Here's an example in HTML and JavaScript:</p>
+<p>HTML: </p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">&lt;button id=</span><span style="color: #e8d738">"btnSearch"&gt;Sea</span>rch&lt;/button&gt;</p>
+</blockquote>
+<p>JavaScript: </p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">document.getElementById("btnSearch").innerHTML = "Not working";</span></p>
+</blockquote>
+<p>This code snippet will alter the text within the button from "Search" to "Not working."</p>
+<ul><li><b><span class="npf_color_rachel"><i>Assigning a Class:</i></span></b></li>
+</ul>
+<p>For broader selections of elements, you can assign a class and use the <b><i><span class="npf_color_monica">.querySelector()</span></i></b><i><span class="npf_color_monica"> </span></i>function. Keep in mind that this method can select multiple elements, in contrast to <b>.getElementById()</b>, which typically focuses on a single element and is more commonly used.</p>
+<h2 class="heading"><b><span class="npf_color_ross"><i>Variables </i></span></b></h2>
+<p>Let's keep it simple: What's a variable? Well, <i><b>think of it as a container where you can put different things&mdash;these things could be numbers, words, characters, or even true/false values</b></i>. These various types of stuff that you can store in a variable are called <b><span class="npf_color_monica"><i>DATA TYPES.</i></span></b></p>
+<p>Now, some programming languages are pretty strict about mentioning these data types. Take C and C++, for instance; they're what we call "Typed" languages, and they really care about knowing the data type.</p>
+<p>But here's where JavaScript stands out: <i>When you create a variable in JavaScript, you don't have to specify its data type or anything like that. JavaScript is pretty laid-back when it comes to data types.</i></p>
+<p><b><span class="npf_color_rachel">So, how do you make a variable in JavaScript?</span></b></p>
+<p>There are three main keywords you need to know: <b><span class="npf_color_monica"><i>var</i></span></b><span class="npf_color_monica"><i>, </i></span><span class="npf_color_monica"><i><b>let</b></i></span>, and<span class="npf_color_monica"> </span><span class="npf_color_monica"><b><i>const</i></b></span>.</p>
+<p>But if you're just starting out, here's what you need to know :</p>
+<p><b>const</b>: Use this when you want your <i><span class="npf_color_niles"><b>variable to stay the same, not change</b></span></i>. It's like a constant, as the name suggests.</p>
+<p><b>var and let</b>: These are the ones you use <i><b><span class="npf_color_niles">when you're planning to change the value stored in the variable as your program runs</span></b></i>.</p>
+<p><span style="color: #ff4930"><small>Note that var is rarely used nowadays </small></span></p>
+<p>Check this out: </p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">let Variable1 = 3; </span><br><span style="color: #e8d738">var Variable2 = "This is a string"; </span><br><span style="color: #e8d738">const Variable3 = true;</span></p>
+</blockquote>
+<p>Notice how we can store all sorts of stuff without worrying about declaring their types in JavaScript. It's one of the reasons JavaScript is a popular choice for beginners.</p>
+<h2 class="heading"><b><i><span class="npf_color_ross">Arrays</span></i></b></h2>
+<p>Arrays are a basically just <b><i><span class="npf_color_niles">a group of variables stored in one container </span></i></b>( A container is what ? a variable , So <i><b><span class="npf_color_niles">an array is also just a variable</span></b></i> ) , now again since JavaScript is easy with datatypes <b><i>it is not considered an error to store variables of different datatypeslet </i></b></p>
+<p>for example :</p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">myArray = [1 , 2, 4 , "Name"];</span></p>
+</blockquote>
+<h2 class="heading"><b><i><span class="npf_color_ross">Objects in JavaScript</span></i></b></h2>
+<p>Objects play a significant role, especially in the world of <b><i>OOP : object-oriented programming</i></b> (which we'll talk about in another post). For now, let's focus on understanding what objects are and how they mirror real-world objects.</p>
+<p>In our everyday world, <b><i><span class="npf_color_niles">objects possess characteristics or properties. </span></i></b>Take a car, for instance; it boasts attributes like its color, speed rate, and make.</p>
+<p>So, <i>how do we represent a car in JavaScript?</i> A regular variable won't quite cut it, and neither will an array. <b><i><span class="npf_color_monica">The answer lies in using an object. </span></i></b></p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">const Car = { </span><br><span style="color: #e8d738">color: "red", </span><br><span style="color: #e8d738">speedRate: "200km", </span><br><span style="color: #e8d738">make: "Range Rover" </span><br><span style="color: #e8d738">};</span></p>
+</blockquote>
+<p>In this example, we've encapsulated the car's properties within an object called <b>Car</b>. This structure is not only intuitive but also aligns with how real-world objects are conceptualized and represented in JavaScript.</p>
+<h2 class="heading"><b><i><span class="npf_color_ross">Variable Scope </span></i></b></h2>
+<p>There are three variable scopes : <b><i><span class="npf_color_monica">global scope, local scope, and function scope</span></i></b>. Let's break it down in plain terms.</p>
+<ul><li><b><span class="npf_color_rachel">Global Scope</span></b><span class="npf_color_rachel">:</span> Think of global scope as the wild west of variables. When you declare a variable here, <b><i><span class="npf_color_monica">it's like planting a flag that says, "I'm available everywhere in the code!"</span></i></b> No need for any special enclosures or curly braces. </li>
+<li><span class="npf_color_rachel"><b>Local Scope</b></span><span class="npf_color_rachel">:</span> Picture local scope as a cozy room with its own rules. When you create a variable inside a pair of curly braces, like this: </li>
+</ul>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">//Not here </span><br><span style="color: #e8d738">{ const Variable1 = true; </span><br><span style="color: #e8d738">//Variable1 can only be used here </span><br><span style="color: #e8d738">}</span><br><span style="color: #e8d738"> //Neither here</span></p>
+</blockquote>
+<p><b>Variable1</b> becomes a room-bound secret. <b><i><span class="npf_color_monica">You can't use it anywhere else in the code</span></i></b></p>
+<ul><li><b><span class="npf_color_rachel">Function Scope</span></b><span class="npf_color_rachel">:</span> When you declare a variable inside a function (don't worry, we'll cover functions soon), <b><i><span class="npf_color_monica">it's a member of an exclusive group</span></i></b>. This means you can only name-drop it within that function. .</li>
+</ul>
+<p>So, variable scope is all about where you place your variables and where they're allowed to be used. </p>
+<h2 class="heading"><b><i><span class="npf_color_ross">Adding in user input</span></i></b></h2>
+<p>To capture user input in JavaScript, you can use various methods and techniques depending on the context, such as web forms, text fields, or command-line interfaces.We&rsquo;ll only talk for now about HTML forms</p>
+<p><b><i><span class="npf_color_rachel">HTML Forms</span></i></b><i><span class="npf_color_rachel">:</span></i></p>
+<p>You can create HTML forms using the <b>&amp;</b>lt;;form&gt; element and capture user input using various input elements like text fields, radio buttons, checkboxes, and more. </p>
+<p>JavaScript can then be used to access and process the user's input.</p>
+<h2 class="heading"><b><i><span class="npf_color_ross">Functions in JavaScript</span></i></b></h2>
+<p>Think of a function as <b><i><span class="npf_color_monica">a helpful individual with a specific task</span></i></b>. <i><b><span class="npf_color_monica">Whenever you need that task performed in your code, you simply call upon this capable "person" to get the job done</span></b></i>.</p>
+<p><b>Declaring a Function</b>: Declaring a function is straightforward. You define it like this:</p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738"> function functionName()</span><br><span style="color: #e8d738"> { </span><br><span style="color: #e8d738">// The code that defines what the function does goes here</span><br><span style="color: #e8d738"> }</span></p>
+</blockquote>
+<p>Then, when you need the function to carry out its task, you call it by name:</p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">functionName();</span></p>
+</blockquote>
+<p><b>Using Functions in HTML</b>: Functions are often used in HTML to handle events. But <b><i>what exactly is an event</i></b>? <span class="npf_color_monica"><b><i>It's when a user interacts with something on a web page, like clicking a button, following a link, or interacting with an image.</i></b></span></p>
+<p><b>Event Handling</b>: JavaScript helps us determine <i><b><span class="npf_color_monica">what should happen when a user interacts with elements on a webpage</span></b></i>. Here's how you might use it:</p>
+<p><b>HTML</b>:</p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">&lt;button onclick="FunctionName()" id="btnEvent"&gt;Click</span> me&lt;/button&gt;</p>
+</blockquote>
+<p><b>JavaScript</b>:</p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">function FunctionName() { </span><br><span style="color: #e8d738">var toHandle = document.getElementById("btnEvent"); </span><br><span style="color: #e8d738">// Once I've identified my button, I can specify how to handle the click event here </span><br><span style="color: #e8d738">}</span></p>
+</blockquote>
+<p>In this example, <i>when the user clicks the "Click me" button, the JavaScript function </i><i><b>FunctionName()</b></i><i> is called</i>, and you can specify how to handle that event within the function.</p>
+<p><b><i><span class="npf_color_rachel">Arrow functions : </span></i></b>is a type of functions that was introduced in ES6, you can read more about it in the link below</p>
+<p class="npf_link" data-npf='{"type":"link","url":"https://www.tumblr.com/codingquill/727336039606321152/arrow-functions-in-javascript-es6?source=share","display_url":"https://www.tumblr.com/codingquill/727336039606321152/arrow-functions-in-javascript-es6?source=share","title":"Arrow Functions in JavaScript ES6","description":"JavaScript offers two primary types of functions:\n\nFunction Declaration\n\nAs we discussed in a previous post JavaScript Fundamentals .\n\nIf yo","site_name":"Tumblr"}'><a href="https://www.tumblr.com/codingquill/727336039606321152/arrow-functions-in-javascript-es6?source=share" target="_blank">Arrow Functions in JavaScript ES6</a></p>
+<h2 class="heading"><b><i><span class="npf_color_ross">If Statements </span></i></b></h2>
+<p>These simple constructs come into play in your code, no matter how advanced your projects become.</p>
+<p><b>If Statements Demystified</b>: Let's break it down. "<i>If" is precisely what it sounds like: if something holds true, then do something. You define a condition within parentheses, and if that condition evaluates to true, the code enclosed in curly braces executes.</i></p>
+<p>If statements are your go-to tool for <i><b><span class="npf_color_monica">handling various scenarios, including error management, addressing specific cases, and more.</span></b></i></p>
+<p><b>Writing an If Statement</b>: </p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738"> if (Variable === "help") { </span><br><span style="color: #e8d738">console.log("Send help"); // The console.log() function outputs information to the console </span><br><span style="color: #e8d738">}</span></p>
+</blockquote>
+<p>In this example, if the condition inside the parentheses (in this case, checking if the <b>Variable</b> is equal to "help") is true, the code within the curly braces gets executed.</p>
+<h2 class="heading"><b><i><span class="npf_color_ross">Else and Else If Statements</span></i></b></h2>
+<p><b><span class="npf_color_rachel">Else</span></b>: When the "if" condition is not met, the "else" part kicks in.<i><b> It serves as a safety net, ensuring your program doesn't break and allowing you to specify what should happen in such cases</b></i>.</p>
+<p><b><span class="npf_color_rachel">Else If</span></b><span class="npf_color_rachel">:</span> Now, what if you need to check for a particular condition within a series of possibilities? That's where "else if" steps in. <span class="npf_color_monica"><b><i>It allows you to examine and handle specific cases that require unique treatment.</i></b></span></p>
+<h2 class="heading"><b><i><span class="npf_color_ross">Styling Elements with JavaScript</span></i></b></h2>
+<p>This is the beginner-friendly approach to changing the style of elements in JavaScript. It involves selecting an element using its ID or class, then making use of the<span class="npf_color_monica"><i> </i></span><span class="npf_color_monica"><i><b>.style.property</b></i></span><span class="npf_color_monica"><i> </i></span>method to set the desired styling property.</p>
+<p><b>Example</b>:</p>
+<p>Let's say you have an HTML button with the ID "myButton," and you want to change its background color to red using JavaScript. Here's how you can do it:</p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">HTML: &lt;button id="</span>myButton"&gt;Click me&lt;/button&gt;</p>
+</blockquote>
+<p>JavaScript: </p>
+<blockquote class="npf_indented"><p><span style="color: #e8d738">// Select the button element by its ID </span><br><span style="color: #e8d738">const buttonElement = document.getElementById("myButton"); </span><br><span style="color: #e8d738">// Change the background color property buttonElement.style.backgroundColor = "red";</span></p>
+</blockquote>
+<p>In this example, we first select the button element by its ID using <b>document.getElementById("myButton")</b>. Then, we use <b>.style.backgroundColor</b> to set the background color property of the button to "red." This straightforward approach allows you to dynamically change the style of HTML elements using JavaScript.</p>
+</div>
+</body>
+</html>
